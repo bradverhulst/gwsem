@@ -1,5 +1,5 @@
 require(gwsem)
-
+## TESTING
 # Read the phenotype data into R and look at the data
 gxeData <- read.table("gxeData.txt", header=TRUE)
 head(gxeData)
