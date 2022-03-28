@@ -1,7 +1,7 @@
 require(gwsem)
 require(MASS)
 
-set.seed(54321)
+set.seed(12345)
 
 ## Some basic parameters for the simulation
 numSNP <- 2000        # number of SNPs in the data file
@@ -16,7 +16,7 @@ numPCs <- 6           # principle components
 
 # Simulate Phenotypic Data for a One Factor Model
 # These numbers can be changed to get different parameter estimates
-loadings            <- as.matrix(c(.5, .7, .9))                                                            # The factor loadings
+loadings            <- as.matrix(c(.9, .7, .5))                                                            # The factor loadings
 res                 <- c(1-loadings^2)                                                                     # The item residuals
 sigma               <- loadings %*% t(loadings) + diag(res)                                                # The implied covariance matrix
 phenoData           <- as.data.frame(mvrnorm(numPeople, mu=rep(0,3), Sigma = sigma, empirical=TRUE))       # Simulate the data
